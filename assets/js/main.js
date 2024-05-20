@@ -62,3 +62,42 @@ sr.reveal('.skills__subtitle',{});
 sr.reveal('.skills__text',{}); 
 sr.reveal('.skills__data',{interval: 200}); 
 sr.reveal('.skills__img',{delay: 600});
+
+
+
+// Lazy load images
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyImages = document.querySelectorAll('img.lazy');
+    const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                const lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.classList.remove('lazy');
+                lazyImageObserver.unobserve(lazyImage);
+            }
+        });
+    });
+    
+    lazyImages.forEach(function(lazyImage) {
+        lazyImageObserver.observe(lazyImage);
+    });
+});
+
+// Asynchronously load non-critical scripts
+function loadScript(src, callback) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = callback;
+    document.head.appendChild(script);
+}
+
+// Example: Load Google Analytics script asynchronously
+loadScript('https://www.googletagmanager.com/gtag/js?id=G-3MLPC8S1ZV', function() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3MLPC8S1ZV');
+});
