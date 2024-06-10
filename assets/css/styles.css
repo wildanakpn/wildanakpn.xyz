@@ -337,6 +337,13 @@ img {
   -webkit-border-radius: 190px;
 }
 
+.about__text {
+  text-align: justify;
+  text-decoration: solid;
+  color: #000000;
+}
+/* ===== ABOUT =====*/
+
 /* ===== Projects =====*/
 /* ===== Main Projects =====*/
 /* Define Hero Styles */
