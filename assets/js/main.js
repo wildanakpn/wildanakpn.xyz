@@ -155,3 +155,47 @@ const player = new Plyr('#player', {});
 
 // Expose player so it can be used from the console
 window.player = player;
+
+
+
+
+// Registering a Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js').then(registration => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+
+  const wildanakpn = 'my-site-cache-v1';
+  const urlsToCache = [
+    '/',
+    '/styles/main.css',
+    '/script/main.js'
+  ];
+  
+  self.addEventListener('install', event => {
+    event.waitUntil(
+      caches.open(wildanakpn)
+        .then(cache => {
+          console.log('Opened cache');
+          return cache.addAll(urlsToCache);
+        })
+    );
+  });
+  
+  self.addEventListener('fetch', event => {
+    event.respondWith(
+      caches.match(event.request)
+        .then(response => {
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        })
+    );
+  });
+  
