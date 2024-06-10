@@ -1,0 +1,11 @@
+{
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "Wildan Akbar Putra Nugraha",
+      "url": "https://www.wildanakpn.xyz",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.wildanakpn.xyz/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
