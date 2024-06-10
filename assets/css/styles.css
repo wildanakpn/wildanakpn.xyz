@@ -292,7 +292,7 @@ img {
 .button2 {
   display: inline-block;
   background-color: #48ff48;
-  color: #fff;
+  color: #000000;
   padding: 0.75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
@@ -301,6 +301,7 @@ img {
 
 .button2:hover {
   box-shadow: 0px 10px 36px #2a93ff;
+  color: #000000;
 }
 
 /* ===== ABOUT =====*/
