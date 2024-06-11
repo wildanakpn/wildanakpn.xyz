@@ -1089,6 +1089,7 @@ img {
   color: #ffffff;
   padding: 10px 24px;
   cursor: pointer;
+  font-family: system-ui;
   font-weight: var(--font-semi);
   border-radius: 0.3rem;
   transition: 0.3s;
@@ -1102,6 +1103,7 @@ img {
 .btn-group12 button:hover {
   background-color: #3f9eff;
   font-weight: var(--font-semi);
+  font-family: system-ui;
   border-radius: 0.3rem;
   transition: 0.3s;
   box-shadow: 0px 10px 36px #000;
