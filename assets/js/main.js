@@ -74,6 +74,7 @@ sr.reveal(".skills__img", {
   delay: 600,
 });
 
+/*==================== Lazy load images ====================*/
 // Lazy load images
 document.addEventListener("DOMContentLoaded", function () {
   const lazyImages = document.querySelectorAll("img.lazy");
@@ -105,6 +106,7 @@ function loadScript(src, callback) {
   document.head.appendChild(script);
 }
 
+/*==================== Google Analytics ====================*/
 // Example: Load Google Analytics script asynchronously
 loadScript(
   "https://www.googletagmanager.com/gtag/js?id=G-3MLPC8S1ZV",
@@ -120,6 +122,7 @@ loadScript(
   }
 );
 
+/*==================== Google Tag Manager ====================*/
 // Asynchronously load Google Tag Manager script
 (function (w, d, s, l, i) {
   w[l] = w[l] || [];
@@ -135,6 +138,7 @@ loadScript(
   f.parentNode.insertBefore(j, f);
 })(window, document, "script", "dataLayer", "GTM-NJCR78XS");
 
+/*==================== load Hotjar Analytics ====================*/
 // Asynchronously load Hotjar Analytics script
 (function (h, o, t, j, a, r) {
   h.hj =
@@ -153,9 +157,29 @@ loadScript(
   a.appendChild(r);
 })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
 
+/*==================== Linkedin Tag Manager ====================*/
+// Linkedin Tag Manager
+
+(function () {
+  // Create a script element
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.async = true;
+  script.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+
+  // Insert the script tag into the document
+  var firstScript = document.getElementsByTagName("script")[0];
+  firstScript.parentNode.insertBefore(script, firstScript);
+
+  // Add the LinkedIn Insight tag script
+  var _linkedin_partner_id = "6238212";
+  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+})();
+
+/*==================== Plyr ====================*/
 // Plyr Player
 // Change "{}" to your options:
-// https://github.com/sampotts/plyr/#options
 const player = new Plyr("#player", {});
 
 // Expose player so it can be used from the console
@@ -200,24 +224,3 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-
-// Linkedin Tag Manager
-
-(function () {
-  // Create a script element
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.async = true;
-  script.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-
-  // Insert the script tag into the document
-  var firstScript = document.getElementsByTagName("script")[0];
-  firstScript.parentNode.insertBefore(script, firstScript);
-
-  // Add the LinkedIn Insight tag script
-  var _linkedin_partner_id = "6238212";
-  window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-  window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-})();
-
-
