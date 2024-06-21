@@ -345,6 +345,29 @@ img {
   color: #000000;
 }
 
+
+.button7 {
+  display: inline-block;
+  background-color: #2B2B2C;
+  color: #ffffff;
+  padding: 0.75rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+  --smooth-corners: 4;
+  transition: 0.3s;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.button7:hover {
+  box-shadow: 0px 10px 36px #2a93ff;
+  color: #ffffff;
+  background-color: #3f9eff;
+}
+
 /* ===== ABOUT =====*/
 .about__container {
   row-gap: 2rem;
@@ -397,8 +420,15 @@ img {
 /* ===== Main Projects =====*/
 /* Define Hero Styles */
 .projects-section {
-  background-color: #DEEFE9;
-  background: #95F582;
+  background-color: #E1DFE5;
+  background: #E1DFE5;
+  border-radius: 25px;
+  --smooth-corners: 4;
+}
+
+.work-section {
+  background-color: #E1DFE5;
+  background: #E1DFE5;
   border-radius: 25px;
   --smooth-corners: 4;
 }
@@ -925,12 +955,13 @@ img {
 
 /* ===== Social Contact =====*/
 
+/* ===== HR =====*/
 .styled-hr {
   border: none;
   /* Remove default border */
   height: 2px;
   /* Height of the line */
-  background: linear-gradient(to right, #bfbfbf, #bfbfbf);
+  background: linear-gradient(to right, #BFBFBF, #BFBFBF);
   /* Gradient color */
   margin: 20px 0;
   /* Spacing above and below the line */
@@ -947,10 +978,39 @@ img {
 
 /* Optional shadow effect for a more pronounced line */
 .styled-hr {
-  -moz-box-shadow: 0px 6px 5px #ccc;
-  -webkit-box-shadow: 0px 6px 5px #ccc;
+  -moz-box-shadow: 0px 6px 5px #F5F5F7;
+  -webkit-box-shadow: 0px 6px 5px #F5F5F7;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
+
+.styled-hr2 {
+  border: none;
+  /* Remove default border */
+  height: 2px;
+  /* Height of the line */
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  /* Gradient color */
+  margin: 20px 0;
+  /* Spacing above and below the line */
+  border-radius: 5px;
+  --smooth-corners: 4;
+  /* Rounded corners */
+  width: 80%;
+  /* Adjust the width as needed */
+  margin-left: auto;
+  /* Center horizontally */
+  margin-right: auto;
+  /* Center horizontally */
+}
+
+/* Optional shadow effect for a more pronounced line */
+.styled-hr2 {
+  -moz-box-shadow: 0px 6px 5px #ffffff;
+  -webkit-box-shadow: 0px 6px 5px #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* ===== HR =====*/
 
 /* Ensure the container centers the button */
 .button-container {
@@ -1439,7 +1499,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2B2B2C;
+  background-color: #ffffff;
   box-sizing: border-box;
   /* Include padding and border in the element's total width and height */
   margin: 1rem auto;
@@ -1479,3 +1539,32 @@ img {
 }
 
 /* Card Project Bawah */
+
+
+/* Wave Hands */
+.wave-hands {
+  display: inline-block;
+  /* Ensures the element doesn't take up full width */
+  font-size: 2rem;
+  /* Adjust the size of the emoji */
+  animation: wave 2s infinite;
+  /* Apply the 'wave' animation for 2 seconds infinitely */
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(30deg);
+  }
+
+  75% {
+    transform: rotate(-30deg);
+  }
+}
+
+/* Wave Hands */
