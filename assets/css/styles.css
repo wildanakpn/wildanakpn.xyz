@@ -363,7 +363,7 @@ img {
 /* Define Hero Styles */
 .projects-section {
   background-color: #DEEFE9;
-  background: #DEEFE9;
+  background: #95F582;
   border-radius: 25px;
   --smooth-corners: 4;
 }
@@ -389,8 +389,22 @@ img {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
   margin: auto auto 60px auto;
-  max-width: 1000px;
+  max-width: 999px;
+  padding: 1rem; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+}
+
+@media (max-width: 767px) {
+  .card-container {
+    flex-flow: column wrap; /* Change the flow direction to column for smaller screens */
+    margin: 10px; /* Adjust margin for smaller screens */
+    max-width: 100%; /* Ensure the container takes up the full width of the screen */
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
 }
 
 .center {
@@ -399,6 +413,7 @@ img {
 
 .card {
   background: rgba(244, 244, 244, 0.25);
+  background-color: #FFF;
   -moz-box-shadow: 0px 6px 5px #ccc;
   -webkit-box-shadow: 0px 6px 5px #ccc;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -1110,27 +1125,51 @@ img {
   margin: 20px auto;
   max-width: 840px;
   border-radius: 0.3rem;
+  background-color: #2B2B2C;
+  background: #2B2B2C;
   --smooth-corners: 4;
   transition: 0.3s;
   -moz-box-shadow: 0px 6px 5px #ccc;
   -webkit-box-shadow: 0px 6px 5px #ccc;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 1rem; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in the total width and height */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .container {
+    margin: 10px; /* Adjust margin for smaller screens */
+    max-width: 100%; /* Ensure the container takes up the full width of the screen */
+    padding: 0.5rem; /* Reduce padding for smaller screens */
+  }
 }
 
 /* Plyr Youtube Player */
 
 /* Card Project Bawah */
 .main2 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  align-content: center;
-  align-self: center;
   justify-content: center;
-  justify-items: center;
-  justify-self: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .main2 {
+    flex-direction: row; /* Change to row for larger screens */
+    max-width: 1200px; /* Set a max-width for larger screens */
+    padding: 2rem; /* Adjust padding for larger screens */
+  }
 }
 
 .btn2 {
-  color: #ffffff;
+  color: #000000;
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
@@ -1148,6 +1187,8 @@ img {
   background-color: rgba(255, 255, 255, 0.12);
 }
 
+/* baru nih */
+
 .cards2 {
   display: flex;
   flex-wrap: wrap;
@@ -1155,21 +1196,48 @@ img {
   margin: 0;
   padding: 0;
   align-items: center;
-  align-content: center;
-  align-self: center;
   justify-content: center;
-  justify-items: center;
-  justify-self: center;
+  width: 100%; /* Ensure the container takes up the full width of its parent */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .cards2 {
+    padding: 1rem; /* Adjust padding for larger screens */
+  }
+}
+
+/* General styles for each card item */
 .cards_item2 {
   display: flex;
   padding: 1rem;
+  width: 100%; 
+  height: min-content;/* Make sure the card takes up full width of its container on small screens */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .cards_item2 {
+    width: 45%; /* Adjust width for larger screens */
+    margin: 1%; /* Add some margin for spacing between cards */
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1024px) {
+  .cards_item2 {
+    width: 45%; /* Adjust width for even larger screens */
+    margin: 1%; /* Add some margin for spacing between cards */
+  }
+}
+
+/* baru nih*/
 
 @media (min-width: 40rem) {
   .cards_item {
-    width: 50%;
+    width: 45%;
   }
 }
 
@@ -1180,7 +1248,9 @@ img {
 }
 
 .card2 {
-  background-color: white;
+  background-color: #fff;
+  background: #fff;
+  color: #000000;
   border-radius: 0.25rem;
   --smooth-corners: 4;
   -moz-box-shadow: 0px 6px 5px #ccc;
@@ -1211,11 +1281,35 @@ img {
 
 .card_content2 {
   padding: 1rem;
-  background: linear-gradient(to bottom left, #2b2b2c 40%, #2b2b2c 100%);
+  background-color: #fff;
+  background: #fff;
+  color: #000000;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+  width: 100%; /* Ensure it takes up the full width of its container */
+  max-width: 400px; /* Set a max-width to control how wide the card can get on larger screens */
+  margin: 1rem auto; /* Center the card and add margin */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .card_content2 {
+    max-width: 600px; /* Adjust max-width for larger screens */
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1024px) {
+  .card_content2 {
+    max-width: 768px; /* Adjust max-width for even larger screens */
+  }
 }
 
 .card_title2 {
-  color: #ffffff;
+  color: #000000;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -1224,26 +1318,44 @@ img {
 }
 
 .card_image2 {
-  max-width: 500px;
-  max-height: 300px;
-  width: 500px;
-  height: 300px;
+  width: 100%; /* Ensure it takes up the full width of its container */
+  max-width: 500px; /* Set a max-width for larger screens */
+  height: 200px; /* Maintain aspect ratio */
+  max-height: 200px; /* Set a max-height for larger screens */
+  display: flex;
   align-items: center;
-  align-content: center;
-  align-self: center;
   justify-content: center;
-  justify-items: center;
-  justify-self: center;
   background-color: #2B2B2C;
-  background: #2B2B2C;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  margin: 1rem auto; /* Center the card and add margin */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .card_image2 {
+    max-width: 700px; /* Adjust max-width for larger screens */
+    max-height: 400px; /* Adjust max-height for larger screens */
+  }
+}
+
+/* Media query for even larger screens */
+@media (min-width: 1024px) {
+  .card_image2 {
+    max-width: 900px; /* Adjust max-width for even larger screens */
+    max-height: 500px; /* Adjust max-height for even larger screens */
+  }
 }
 
 .card_text2 {
-  color: #ffffff;
+  color: #000000;
   font-size: 0.875rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
   font-weight: 400;
+}
+
+.btn2 .card_btn2{
+  color: #000000;
 }
 
 /* Card Project Bawah */
