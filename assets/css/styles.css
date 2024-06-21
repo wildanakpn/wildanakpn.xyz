@@ -1127,7 +1127,6 @@ img {
   justify-content: center;
   justify-items: center;
   justify-self: center;
-  max-width: 76rem;
 }
 
 .btn2 {
@@ -1190,7 +1189,24 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  max-width: 76rem;
+  width: 100%; /* Make sure the card takes up full width of its container */
+  max-width: 400px; /* Limit the maximum width of the card */
+  margin: 1rem auto; /* Center the card and add some margin */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .card2 {
+    max-width: 600px; /* Adjust max-width for larger screens */
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .card2 {
+    max-width: 90%; /* Make sure the card fits within the screen */
+    margin: 0.5rem auto; /* Reduce margin for smaller screens */
+  }
 }
 
 .card_content2 {
