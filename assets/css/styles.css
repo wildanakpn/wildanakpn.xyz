@@ -1127,6 +1127,7 @@ img {
   justify-content: center;
   justify-items: center;
   justify-self: center;
+  max-width: 76rem;
 }
 
 .btn2 {
@@ -1189,6 +1190,7 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  max-width: 76rem;
 }
 
 .card_content2 {
