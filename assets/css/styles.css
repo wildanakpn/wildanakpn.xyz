@@ -360,6 +360,7 @@ img {
   justify-content: center;
   justify-items: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .button7:hover {
@@ -1319,25 +1320,6 @@ img {
   }
 }
 
-.btn2 {
-  color: #000000;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  --smooth-corners: 4;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 2px solid #2a93ff;
-  background: transparent;
-}
-
-.btn2:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-
 /* baru nih */
 
 .cards2 {
@@ -1516,6 +1498,13 @@ img {
     max-height: 400px;
     /* Adjust max-height for larger screens */
   }
+}
+
+/* Zoom effect on hover */
+.card_image2:hover {
+  transform: scale(1.2);
+  transition-delay: initial;
+  /* Scale the image to 110% of its original size */
 }
 
 /* Media query for even larger screens */
