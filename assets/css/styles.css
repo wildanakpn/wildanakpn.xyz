@@ -1634,3 +1634,86 @@ img {
 }
 
 /* Ilustrasi Work */
+
+
+
+/* Education */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Partner Section */
+.partner-section {
+  padding: 50px 0;
+  background-color: #F6F6F6;
+}
+
+.containeredu {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.rowedu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.columnedu {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.columnedu h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.columnedu p {
+  font-size: 1.2em;
+}
+
+.image-columnedu {
+  flex: 1 1 calc(14.28% - 20px);
+  /* 7 images in a rowedu with 20px gap */
+  margin: 10px;
+  text-align: center;
+}
+
+.image-columnedu img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #bababa;
+  padding: 10px;
+  background-color: #F6F6F6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .image-columnedu {
+    flex: 1 1 calc(33.33% - 20px);
+    /* 3 images in a rowedu */
+  }
+}
+
+@media (max-width: 767px) {
+  .image-columnedu {
+    flex: 1 1 calc(50% - 20px);
+    /* 2 images in a rowedu */
+  }
+}
+
+/* Education */
