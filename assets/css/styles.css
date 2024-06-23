@@ -1636,22 +1636,7 @@ img {
 /* Ilustrasi Work */
 
 
-
 /* Education */
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Partner Section */
 .partner-section {
   padding: 50px 0;
