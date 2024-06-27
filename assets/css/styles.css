@@ -122,7 +122,9 @@ img {
   max-width: 76rem;
   height: max-content;
   max-height: max-content;
-  background-image: url(https://res.cloudinary.com/jerrick/image/upload/v1523472954/hgjbuqpshv7xg1bypizm.gif);
+  background: linear-gradient(315deg, #3F9EFF 5%, #7CA86C 18%, #2B2B2D 38%, #2B2B2D 68%, #5AFF5A 98%);
+  background-size: 400% 400%;
+  animation: aurora 15s ease infinite;
   opacity: 90%;
   border-radius: 40px;
   --smooth-corners: 4;
@@ -133,6 +135,20 @@ img {
   /* Add padding for better spacing on mobile */
   box-sizing: border-box;
   /* Ensure padding is included in the total width */
+}
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Media Query for Mobile Devices */
@@ -169,6 +185,53 @@ img {
   background-color: #fff;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#scroll-down {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+#scroll-down:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#scroll-down svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  .scroll-down {
+    bottom: 10px;
+  }
+
+  #scroll-down {
+    width: 30px;
+    height: 30px;
+  }
+
+  #scroll-down svg {
+    width: 15px;
+    height: 15px;
+  }
+}
+
 
 /*===== NAV =====*/
 .nav {
@@ -727,6 +790,10 @@ img {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
+}
+
+.footer__icon:hover {
+  color: #5AFF5A;
 }
 
 .footer__copy {
