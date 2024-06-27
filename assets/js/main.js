@@ -224,3 +224,29 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var metaKeywords = document.createElement('meta');
+  metaKeywords.name = "keywords";
+  metaKeywords.content = "keyword1, keyword2, keyword3";
+  document.getElementsByTagName('head')[0].appendChild(metaKeywords);
+
+  var metaDescription = document.createElement('meta');
+  metaDescription.name = "description";
+  metaDescription.content = "Wildan Akbar Putra Nugraha | IT Product Designer Customer-Centric or UI/UX Designer";
+  document.getElementsByTagName('head')[0].appendChild(metaDescription);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var metaKeywords = document.createElement('meta');
+  metaKeywords.name = "Wildan Akbar Putra Nugraha | IT Product Designer Customer-Centric or UI/UX Designer";
+  metaKeywords.content = "Wildan Akbar Putra Nugraha | IT Product Designer Customer-Centric or UI/UX Designer";
+  document.getElementsByTagName('head')[0].appendChild(metaKeywords);
+
+  var metaDescription = document.createElement('meta');
+  metaDescription.name = "description";
+  metaDescription.content = "Wildan Akbar Putra Nugraha | IT Product Designer Customer-Centric or UI/UX Designer";
+  document.getElementsByTagName('head')[0].appendChild(metaDescription);
+});
